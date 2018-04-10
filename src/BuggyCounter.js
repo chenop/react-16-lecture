@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button} from "material-ui";
+import PropTypes from 'prop-types';
 
 class BuggyCounter extends Component {
 
@@ -18,13 +19,15 @@ class BuggyCounter extends Component {
 
         return (
             <div>
-                <Button onClick={this.handleClick}>Counter: {this.state.counter}</Button>
+                <Button onClick={this.handleClick}>{this.props.name}: {this.state.counter}</Button>
             </div>
         );
     }
 }
 
-BuggyCounter.propTypes = {};
+BuggyCounter.propTypes = {
+    name: PropTypes.string.isRequired
+};
 BuggyCounter.defaultProps = {};
 
 export default BuggyCounter;

@@ -16,8 +16,14 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
           <ErrorHandler>
-              <BuggyCounter/>
+              <BuggyCounter name="c1"/>
           </ErrorHandler>
+
+          <ErrorHandler>
+              <BuggyCounter name="c2"/>
+          </ErrorHandler>
+
+
       </div>
     );
   }
