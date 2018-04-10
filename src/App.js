@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import BuggyCounter from "./BuggyCounter";
-import ErrorHandler from "./ErrorHandler";
+import BuggyCounter from "./ErrorBoundary/BuggyCounter";
+import ErrorHandler from "./ErrorBoundary/ErrorHandler";
 
 class App extends Component {
   render() {
