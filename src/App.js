@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import BuggyCounter from "./ErrorBoundary/BuggyCounter";
-import ErrorHandler from "./ErrorBoundary/ErrorHandler";
+import Family from "./ContextApi/Family";
+import MyProvider from "./ContextApi/MyProvider";
 
 class App extends Component {
   render() {
@@ -15,14 +15,10 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-          <ErrorHandler>
-              <BuggyCounter name="c1"/>
-          </ErrorHandler>
 
-          <ErrorHandler>
-              <BuggyCounter name="c2"/>
-          </ErrorHandler>
-
+          <MyProvider>
+            <Family />
+          </MyProvider>
 
       </div>
     );
